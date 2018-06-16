@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo "自然数を入力してください"
+read i
+
+for ((j=2; j<i; j++));do
+	if [[ $((i%j)) = 0 ]]; then
+		echo "素数ではない"
+		exit 0;
+	fi
+done
+echo "素数である"
